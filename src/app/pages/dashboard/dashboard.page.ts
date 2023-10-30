@@ -14,7 +14,13 @@ export class DashboardPage implements OnInit {
   key = 'MySecretKey123';
   iv = '1234567890123456';
   encryptedMessage;
-  decryptedMessage
+  decryptedMessage;
+
+  accountNumber = '123456789'; // Your original account number
+  showAccountNumber = false;
+  maskedAccountNumber = '******6789'; // Initial masked value
+
+
   ngOnInit() {
     this.getData();
     this.encryptedMessage = this.apiCallService.encryptMessage(
@@ -37,4 +43,10 @@ export class DashboardPage implements OnInit {
       console.log(this.res);
     });
   }
+
+  toggleVisibility() {
+    this.showAccountNumber = !this.showAccountNumber;
+  }
+
+
 }

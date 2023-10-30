@@ -26,6 +26,7 @@
 
 .right_section{
     text-align: center;
+    margin-top: 65px;
     .button-solid {
         --background: #042a68;
         --color: var(--ion-color-primary-contrast, #fff);
@@ -47,7 +48,10 @@
 
 
 .account_card_wrap{
+    position: relative;
     .account_card{
+        z-index: 5;
+    position: relative;
         background: linear-gradient(1deg, #112761, #bc0116, #bc0116 );
     border-radius: 16px;
     padding: 16px;
@@ -64,7 +68,9 @@
             font-weight: 700;
         
             .account_name{}
-.right_arrow{}
+.right_arrow{
+    font-size: 16px;
+}
         }
 
 .middle_sec{
@@ -80,8 +86,21 @@
 }
 
 .account_num_sec{
-    .accountNum{}
-.viewHideaccontNum{}
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    .accountNum{
+        font-size: 20px;
+        min-width: 100px;
+    }
+.viewHideaccontNum{
+    min-width: 20px;
+    font-size: 22px;
+    margin-left: 10px;
+    line-height: 1;
+}
+
 }
 
 .Statment_sec{
@@ -97,7 +116,31 @@
 }
 
     }
+.back_card{
+    height: 20px;
+    background-color: #dadada;
 
+    &.first{
+        position: absolute;
+        bottom: -40px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 4;
+        width: 55%;
+        border-radius: 0 0 10px 10px;
+        box-shadow: 0px 0px 8px 8px gray;
+    }
+    &.second{
+        position: absolute;
+        bottom: -26px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 4;
+        width: 65%;
+        box-shadow: 0px 0px 8px 8px gray; 
+        border-radius: 0 0 10px 10px;
+    }
+}
 }
 
 

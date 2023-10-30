@@ -14,7 +14,7 @@
   <div class="account_card">
   <div class="top_sect">
     <div class="account_name">My Saving Account</div>
-    <div class="right_arrow">></div>
+    <div class="right_arrow"><ion-icon name="chevron-forward-outline"></ion-icon></div>
   </div>
 
   <div class="middle_sec">
@@ -22,16 +22,20 @@
   </div>
 
   <div class="account_num_sec">
-    <div class="accountNum">123456789</div>
-    <div class="viewHideaccontNum">hideShow Button</div>
+    <div class="accountNum">{{ showAccountNumber ? accountNumber : maskedAccountNumber }}</div>
+    <div class="viewHideaccontNum" (click)="toggleVisibility()">
+      <ion-icon *ngIf="showAccountNumber" name="eye-off-outline"></ion-icon>
+      <ion-icon *ngIf="!showAccountNumber" name="eye-outline"></ion-icon>
+    </div>
   </div>
-
   <div class="Statment_sec">
     <div class="staement_view">Statment</div>
   </div>
   </div>
-</div>
 
+  <div class="back_card first"></div>
+  <div class="back_card second"></div>
+</div>
       <div class="right_section">
         <ion-button class="registerButton" shape="round">Joy of Banking</ion-button>
       </div>
