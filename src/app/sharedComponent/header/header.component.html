@@ -1,13 +1,33 @@
-<ion-header>
+<ion-header [translucent]="true" class="main_hearder ion-no-border">
 
-  <ion-toolbar color="primary">
-    <ion-buttons slot="start">
-      <ion-back-button defaultHref="/"></ion-back-button>
+  <ion-toolbar class="menu_toolbar">
+    <ion-buttons class="menu_button_wrap" slot="start">
+      <ion-icon class="menu_button" name="menu-outline"></ion-icon>
+      <!-- <ion-back-button defaultHref="/"></ion-back-button> -->
     </ion-buttons>
-    <ion-title>
+    <ion-title *ngIf="title" slot="start">
       {{ title }}
 
     </ion-title>
+    <ion-title part="place" class="image_logo">
+      <img src="assets/images/logo2.png" alt="">
 
+
+    </ion-title>
+
+    <ion-buttons class="menu_button_wrap" slot="end">
+      <ion-icon class="menu_button" name="search-outline"></ion-icon>
+
+    </ion-buttons>
+
+    <ion-buttons class="menu_button_wrap" slot="end">
+      <ion-icon class="menu_button" name="notifications-outline"></ion-icon>
+
+    </ion-buttons>
+
+    <ion-buttons class="menu_button_wrap" slot="end">
+      <ion-icon class="menu_button" name="power-outline"></ion-icon>
+
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>

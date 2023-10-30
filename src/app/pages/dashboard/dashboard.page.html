@@ -1,7 +1,51 @@
-<app-header [title]="'Dashboard'"></app-header>
-
+<!-- <app-header [title]="'Dashboard'"></app-header> -->
+<app-header [title]="''"></app-header>
 <ion-content [fullscreen]="true">
-<ion-list>
+  <main class="main_dashboard">
+
+       <!-- section two -->
+       <div class="user_logo_sec">
+        <div class="logo_img"><ion-icon name="person-outline"></ion-icon></div>
+  
+        <div class="name_user">Hi, Sumantha</div>
+      </div>
+
+<div class="account_card_wrap">
+  <div class="account_card">
+  <div class="top_sect">
+    <div class="account_name">My Saving Account</div>
+    <div class="right_arrow">></div>
+  </div>
+
+  <div class="middle_sec">
+    <div class="view_my_bal">View Balance</div>
+  </div>
+
+  <div class="account_num_sec">
+    <div class="accountNum">123456789</div>
+    <div class="viewHideaccontNum">hideShow Button</div>
+  </div>
+
+  <div class="Statment_sec">
+    <div class="staement_view">Statment</div>
+  </div>
+  </div>
+</div>
+
+      <div class="right_section">
+        <ion-button class="registerButton" shape="round">Joy of Banking</ion-button>
+      </div>
+
+
+<div class="card_dash_wrap">
+  <!-- <app-cards [title]="'Dashboard2'"></app-cards> -->
+</div>
+
+    <div class="imageSwipperWrap">
+      <app-imgswiper></app-imgswiper>
+    </div>
+  </main>
+<!-- <ion-list>
   <ion-item>
     <ion-label>{{this.encryptedMessage}}</ion-label>
  </ion-item>
@@ -14,5 +58,7 @@
   <ion-item>
     <ion-label>{{item.title}}</ion-label>
   </ion-item>
-</ion-list>
+</ion-list> -->
 </ion-content>
+
+<app-footer></app-footer>
