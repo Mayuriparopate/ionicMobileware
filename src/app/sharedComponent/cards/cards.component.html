@@ -1,7 +1,8 @@
  <div class="card_main_log_wrap">
 
-  <div class="card_main_log">
-    <div class="card_view" *ngFor="let block of cardBlock; let i = index">
+  <div class="card_main_log"  [ngClass]="{ 'Dash_active1': title === 'Dashboard1', 'Dash_active2': title === 'Dashboard2',
+  'Dash_active3': title === 'Dashboard3'}">
+    <div class="card_view" *ngFor="let block of cardBlock; let i = index" >
       <div class="img_block">
         <img [src]="block.imageUrl" alt="Image {{i + 1}}">
       </div>

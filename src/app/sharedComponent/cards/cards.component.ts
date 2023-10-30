@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ConstantsService } from 'src/app/service/constants/constants.service';
 
 @Component({
@@ -7,11 +7,15 @@ import { ConstantsService } from 'src/app/service/constants/constants.service';
   styleUrls: ['./cards.component.scss'],
 })
 export class CardsComponent  implements OnInit {
+  @Input() title: string;
   cardBlock:any=[];
   constructor(private constant:ConstantsService) { }
 
   ngOnInit() {
     this.cardBlock = this.constant.blocks
   }
+
+
+  
 
 }
