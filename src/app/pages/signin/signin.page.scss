@@ -240,3 +240,165 @@ ion-content {
 }
 
 
+.footer_tab_section {
+    .tab_wrap {
+      position: relative;
+      padding: 0;
+      box-shadow: 0 -2px 5px 0 rgba(0, 0, 0, 0.12);
+    //   border-radius: 16px 16px 0 0;
+      min-height: 55px;
+      height: 55px;
+      display: flex;
+      justify-content: space-around;
+      background: #fff;
+  
+      .tab {
+        flex: 20%;
+        position: relative;
+  
+        .tab_bar_v2 {
+          height: 60px;
+          transition: 1s;
+          .tab_lable {
+            bottom: 5%;
+            position: absolute;
+            color: #022a68;
+            font-family: "Roboto-Regular";
+            font-size: 10px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: 1s;
+            width: 100%;
+    text-align: center;
+          }
+          &::after {
+            content: '';
+            height: 4px;
+            position: absolute;
+            width: 28px;
+            background: #fff;
+            left: 50%;
+            top: 3%;
+            border-radius: 0 0 10px 10px;
+            transform: translate(-50%, -50%);
+            transition: 1s;
+            opacity: 0.1;
+          }
+        }
+  
+        &.activeT {
+          .tab_bar_v2 {
+            transition: 1s;
+            .tab_lable {
+              color: #022a68 !important;
+              font-family: 'Roboto-Medium';
+              transition: 1s;
+            }
+            &::after {
+              background: #dd2c2c;
+              transition: 1s;
+              opacity: 1;
+            }
+          }
+        }
+  
+        &.tab1 {
+          .tab_bar_v2 {
+            &.home-tab {
+              background: url(/assets/icon/home-lined.svg) no-repeat 50% 20%;
+            }
+          }
+  
+          &.activeT {
+            .tab_bar_v2 {
+              &.home-tab {
+                background: url(/assets/icon/home-filled.svg) no-repeat 50% 20%;
+          
+              }
+            }
+          }
+        }
+  
+        &.tab2 {
+          .tab_bar_v2 {
+            &.portfolio-tab {
+              background: url(/assets/icon/home-lined.svg) no-repeat 50% 20%;
+            }
+          }
+  
+          &.activeT {
+            .tab_bar_v2 {
+              &.portfolio-tab {
+                background: url(/assets/icon/home-filled.svg) no-repeat 50% 20%;
+              }
+            }
+          }
+        }
+
+        &.tab3{
+            background: #022a68;
+            border-radius: 50%;
+            top: -15px;
+            min-height: 70px;
+            min-width: 70px;
+            border: 2px solid #fff;
+            padding: 5px 14px;
+            max-width: 70px;
+            .tab_bar_v2 {
+                .tab_lable {
+                    color: #fff !important;
+                  }
+                &::after {
+                    content: none;
+                  }
+                &.scan-tab {
+                  background: url(/assets/images/scanpay.png) no-repeat 50% 20%;
+                  background-size: contain;
+         
+                }
+              }
+      
+              &.activeS {
+                .tab_bar_v2 {
+                  &.scan-tab {
+                    // background: url(/assets/icon/learn-filled.svg) no-repeat 50% 20%;
+                  }
+                }
+              }
+            
+        }
+  
+        &.tab4 {
+          .tab_bar_v2 {
+            &.learns-tab {
+              background: url(/assets/icon/learn-lined.svg) no-repeat 50% 20%;
+            }
+          }
+  
+          &.activeT {
+            .tab_bar_v2 {
+              &.learns-tab {
+                background: url(/assets/icon/learn-filled.svg) no-repeat 50% 20%;
+              }
+            }
+          }
+        }
+  
+        &.tab5 {
+          .tab_bar_v2 {
+            &.account-tab {
+              background: url(/assets/icon/learn-lined.svg) no-repeat 50% 20%;
+            }
+          }
+  
+          &.activeT {
+            .tab_bar_v2 {
+              &.account-tab {
+                background: url(/assets/icon/learn-filled.svg) no-repeat 50% 20%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
