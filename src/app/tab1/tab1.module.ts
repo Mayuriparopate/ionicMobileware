@@ -8,7 +8,6 @@ import { ExploreContainerComponentModule } from '../explore-container/explore-co
 import { Tab1PageRoutingModule } from './tab1-routing.module';
 import { TranslateModule } from '@ngx-translate/core';
 import { SharedComponentModule } from '../sharedComponent/shared-component.module';
-import { CardsComponent } from '../sharedComponent/cards/cards.component';
 
 
 @NgModule({

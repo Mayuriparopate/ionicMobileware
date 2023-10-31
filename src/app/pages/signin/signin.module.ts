@@ -12,7 +12,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { SharedComponentModule } from "../../sharedComponent/shared-component.module";
 
 @NgModule({
-    declarations: [SigninPage, CardsComponent],
+    declarations: [SigninPage],
     imports: [
         CommonModule,
         FormsModule,
