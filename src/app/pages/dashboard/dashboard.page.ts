@@ -21,6 +21,8 @@ export class DashboardPage implements OnInit {
   maskedAccountNumber = '******6789'; // Initial masked value
 
 
+  shouldAddClass1 = false; 
+
   ngOnInit() {
     this.getData();
     this.encryptedMessage = this.apiCallService.encryptMessage(

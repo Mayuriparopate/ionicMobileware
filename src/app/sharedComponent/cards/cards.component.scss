@@ -15,7 +15,15 @@
         background: #00000070;
     }
    &.Dash_active2{
-    background: #fcfcfcc8;
+    background: #e8e8e8;
+
+    .card_view{
+        .bottom_text{
+            color:   #969696;
+          }
+
+    }
+
     }
     &.Dash_active3{
         background: rgb(54, 54, 54);
@@ -49,5 +57,19 @@
               }
 
           }
+      }
+
+      .arrow_buttonCla{
+        text-align: center;
+        position: relative;
+        top: -15px;
+
+        ion-icon{
+            
+            background: white;
+            font-size: 32px;
+            color: #5a5757;
+            border-radius: 50%;
+        }
       }
   }

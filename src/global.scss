@@ -74,3 +74,30 @@ ion-item {
 // }
 
 // }
+
+
+
+.card_dash_wrap {
+  position: relative;
+  app-cards {
+      &.addClass1 {
+          position: relative;
+          top: -38vh;
+          z-index: 999;
+          transition: top 1s;
+                  opacity: 1;
+
+                  // position: absolute;
+                  // bottom: 0;
+                  // z-index: 999;
+                  // transform: translate(0%, 5%);
+                  // transition: transform 5s, position 5s;
+          .card_main_log_wrap{
+              .card_main_log{
+                
+          
+              }
+          }
+      }
+  }
+}
