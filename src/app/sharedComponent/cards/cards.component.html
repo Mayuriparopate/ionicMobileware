@@ -10,11 +10,21 @@
     </div>
 
   </div>
-<div class="arrow_buttonCla">
+<!-- <div class="arrow_buttonCla">
   <ion-icon name="chevron-down-circle-outline" *ngIf="isChevronDownVisible" (click)="toggleClass()"></ion-icon>
   <ion-icon name="chevron-up-circle-outline" *ngIf="!isChevronDownVisible" (click)="toggleClass()"></ion-icon>
 
-</div>
+</div> -->
+
+  <p >
+    {{ isChevronDownVisible ? 'Show Dashboard1' : 'Show Dashboard2' }}
+  </p>
+  <div class="arrow_buttonCla">
+    <ion-icon name="chevron-down-circle-outline" *ngIf="isChevronDownVisible" (click)="toggleChevron(true)"></ion-icon>
+    <ion-icon name="chevron-up-circle-outline" *ngIf="!isChevronDownVisible" (click)="toggleChevron(false)"></ion-icon>
+  </div>
+
+
 
    <!-- <p class="upDown" (click)="toggleClass()">upshow</p> -->
 </div> 

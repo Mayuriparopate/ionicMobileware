@@ -51,4 +51,13 @@ export class DashboardPage implements OnInit {
   }
 
 
+  isChevronDownVisible: boolean = false;
+
+
+
+  toggleDashboard(isDown: boolean) {
+    console.log(isDown);
+    this.isChevronDownVisible = !this.isChevronDownVisible;
+  }
+
 }

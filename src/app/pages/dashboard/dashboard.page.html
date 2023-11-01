@@ -41,11 +41,19 @@
       </div>
 
 
-<div class="card_dash_wrap">
-  <!-- <app-cards  [title]="'Dashboard2'"></app-cards>  -->
+<!-- <div class="card_dash_wrap">
   <app-cards [title]="'Dashboard2'" [ngClass]="{'addClass1': shouldAddClass1}" (toggleClassEvent)="shouldAddClass1 = !shouldAddClass1"></app-cards>
 
+</div> -->
+
+<div class="card_dash_wrap" *ngIf="isChevronDownVisible">
+  <app-cards [title]="'Dashboard1'" class="card_pc1" (toggleDashboard)="toggleDashboard(true)"></app-cards>
 </div>
+
+<div class="card_dash_wrap" *ngIf="!isChevronDownVisible">
+  <app-cards [title]="'Dashboard2'" class="addClass1" (toggleDashboard)="toggleDashboard(false)"></app-cards>
+</div>
+
 
     <div class="imageSwipperWrap">
       <app-imgswiper></app-imgswiper>

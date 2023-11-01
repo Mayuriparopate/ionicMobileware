@@ -23,12 +23,15 @@ export class CardsComponent  implements OnInit {
   //   this.isClass1Visible = !this.isClass1Visible;
   // }
  
-  @Output() toggleClassEvent = new EventEmitter<void>(); // Renamed the @Output() property
-
+  @Output() toggleDashboard = new EventEmitter<boolean>();
   isChevronDownVisible = true;
-  toggleClass() {
-    console.log('Toggle method called');
+
+  // toggleClass() {
+  //   this.isChevronDownVisible = !this.isChevronDownVisible;
+  // }
+
+  toggleChevron(isDown: boolean) {
     this.isChevronDownVisible = !this.isChevronDownVisible;
-    this.toggleClassEvent.emit();
+    this.toggleDashboard.emit(isDown);
   }
 }
