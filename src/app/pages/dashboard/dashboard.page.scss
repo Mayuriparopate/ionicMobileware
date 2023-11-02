@@ -1,0 +1,156 @@
+.main_dashboard {
+    padding: 20px;
+
+    // section second
+    .user_logo_sec {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        margin-top: 14px;
+
+        .logo_img {
+
+            border: 1px solid #b1b1b1;
+            border-radius: 50%;
+            padding: 5px 7px;
+            font-size: 22px;
+            color: #b1b1b1;
+        }
+
+        .name_user {
+            margin-left: 14px;
+            font-size: 18px;
+            font-weight: 500;
+            color: #b1b1b1;
+        }
+    }
+
+    .right_section {
+        text-align: center;
+        margin-top: 65px;
+
+        .button-solid {
+            --background: #042a68;
+            --color: var(--ion-color-primary-contrast, #fff);
+            --border-radius: 50px;
+            --padding-start: 16px;
+            --padding-top: 12px;
+            --padding-bottom: 12px;
+            --padding-end: 16px;
+            min-height: auto;
+            font-size: 15px;
+            font-weight: 700;
+            text-transform: capitalize;
+            text-align: center;
+            margin: auto;
+
+        }
+    }
+
+
+
+    .account_card_wrap {
+        position: relative;
+
+        .account_card {
+            z-index: 5;
+            position: relative;
+            background: linear-gradient(1deg, #112761, #bc0116, #bc0116);
+            border-radius: 16px;
+            padding: 16px;
+            margin: 20px auto;
+            max-width: 80%;
+            color: #fff;
+            text-align: center;
+
+            .top_sect {
+                display: flex;
+                justify-content: space-between;
+                border-bottom: 1px solid #ffffff7a;
+                padding-bottom: 10px;
+                font-size: 12px;
+                font-weight: 700;
+
+                .account_name {}
+
+                .right_arrow {
+                    font-size: 16px;
+                }
+            }
+
+            .middle_sec {
+                .view_my_bal {
+                    border-radius: 32px;
+                    border: 1px solid #fff;
+                    display: inline-block;
+                    margin: 32px 0 12px;
+                    padding: 8px 28px;
+                    font-weight: 700;
+
+                }
+            }
+
+            .account_num_sec {
+                display: inline-flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 10px;
+
+                .accountNum {
+                    font-size: 20px;
+                    min-width: 100px;
+                }
+
+                .viewHideaccontNum {
+                    min-width: 20px;
+                    font-size: 22px;
+                    margin-left: 10px;
+                    line-height: 1;
+                }
+
+            }
+
+            .Statment_sec {
+                .staement_view {
+                    display: inline-block;
+                    background: #222779;
+                    padding: 5px 28px;
+                    border-radius: 32px;
+                    font-size: 12px;
+                    margin-top: 12px;
+
+                }
+            }
+
+        }
+
+        .back_card {
+            height: 20px;
+            background-color: #dadada;
+
+            &.first {
+                position: absolute;
+                bottom: -40px;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 4;
+                width: 55%;
+                border-radius: 0 0 10px 10px;
+                box-shadow: 0px 0px 8px 8px gray;
+            }
+
+            &.second {
+                position: absolute;
+                bottom: -26px;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 4;
+                width: 65%;
+                box-shadow: 0px 0px 8px 8px gray;
+                border-radius: 0 0 10px 10px;
+            }
+        }
+    }
+
+
+}

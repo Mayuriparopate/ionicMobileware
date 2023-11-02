@@ -48,3 +48,76 @@
 ion-item {
   --transition: none;
 }
+
+
+// :root {
+//   .toolbar-title{
+//     display: flex;
+//          justify-content: center;
+//          align-items: center;}
+
+// app-header{
+
+      
+//         .toolbar-title{
+//            display: flex;
+//                 justify-content: center;
+//                 align-items: center;}
+        
+//                 ion-title::class(toolbar-title) {
+//                   color: blue;
+//                   opacity: 1;
+//                   display: flex;
+//                   justify-content: center;
+//                   align-items: center;
+//                 }
+// }
+
+// }
+
+
+
+.card_dash_wrap {
+  position: relative;
+  app-cards {
+    // position: relative;
+    // bottom: 0;
+    // z-index: 999;
+    transform: translate(-50%, 100%);
+    transition: transform 2s, position 2s;
+      &.addClass1 {
+          // position: relative;
+          // top: -38vh;
+          // z-index: 999;
+          // transition: top 1s;
+          //         opacity: 1;
+
+
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          z-index: 999;
+          transform: translate(-50%, 5%);
+          transition: transform 2s, position 2s;
+          width: 100%;
+
+    
+          .card_main_log_wrap{
+            padding: 0 12px;
+            margin-top: 0;
+              .card_main_log{
+                //height: 500px;   //change as per reqired
+          
+              }
+          }
+      }
+      // .card_main_log_wrap{
+      //   padding: 0 12px;
+      //   margin-top: 0;
+      //     .card_main_log{
+      //     //  height: 500px;   //change as per reqired
+      
+      //     }
+      // }
+  }
+}

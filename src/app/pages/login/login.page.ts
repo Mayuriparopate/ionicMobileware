@@ -28,22 +28,22 @@ export class LoginPage implements OnInit {
     const usernameControl = this.loginForm.get('username');
     const passwordControl = this.loginForm.get('password');
   
-    if (usernameControl && passwordControl) {
-      const username = usernameControl.value;
-      const password = passwordControl.value;
+    // if (usernameControl && passwordControl) {
+    //   const username = usernameControl.value;
+    //   const password = passwordControl.value;
 
-      if (this.authService.authenticate(username, password)) {
-        // Successful login, navigate to a different page
-        console.log("welcome")
-        this.errorMessage="";
-        this.router.navigate(['/dashboard']);
+    //   if (this.authService.authenticate(username, password)) {
+    //     // Successful login, navigate to a different page
+    //     console.log("welcome")
+    //     this.errorMessage="";
+    //     this.router.navigate(['/dashboard']);
       
-      } else {
-        // Display an error message if login fails
-        this.errorMessage = 'Invalid username or password';
-      }
+    //   } else {
+    //     // Display an error message if login fails
+    //     this.errorMessage = 'Invalid username or password';
+    //   }
   
-    }
+    // }
 
   }
 

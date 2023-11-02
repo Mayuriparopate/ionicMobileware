@@ -1,5 +1,3 @@
-
-
 <ion-content [fullscreen]="true">
   <main class="main_section">
 
@@ -10,98 +8,108 @@
       </div>
 
       <div class="right_section">
-        <ion-button class="registerButton"  (click)="register()" expand="block">Register Now</ion-button>
+        <ion-button class="registerButton" (click)="register()" expand="block">Register Now</ion-button>
       </div>
     </div>
 
-     <!-- section two -->
-<div class="user_logo_sec">
-  <div class="logo_img"><img src="../../../assets/images/userlogo.png" alt=""></div>
+    <!-- section two -->
+    <div class="user_logo_sec">
+      <div class="logo_img"><img src="../../../assets/images/userlogo.png" alt=""></div>
 
-  <div class="name_user">Hi, Sumantha</div>
-</div>
+      <div class="name_user">Hi, Sumantha</div>
+    </div>
 
-     <!-- section three -->
+    <!-- section three -->
     <div class="login_sec">
       <div class="card_main_log">
         <ul class="nav">
           <li class="nav-item" (click)="selectTab('mPIN')" [ngClass]="{ 'active': selectedTab === 'mPIN' }">MPIN</li>
-          <li class="nav-item" (click)="selectTab('Internet Banking')" [ngClass]="{ 'active': selectedTab === 'Internet Banking' }">INTERNET BANKING</li>
+          <li class="nav-item" (click)="selectTab('Internet Banking')"
+            [ngClass]="{ 'active': selectedTab === 'Internet Banking' }">INTERNET BANKING</li>
         </ul>
         <div class="tab-content">
           <div class="tab-pane" [ngClass]="{ 'active-tab': selectedTab === 'mPIN' }">
             <div class="mpin-input-container">
-              <!-- <input type="text" class="bottom-border-input" [(ngModel)]="mPIN[0]" (input)="onMPINInput(0)" [ngClass]="{ 'active': selectedMPIN === 0 }" id="mpin-input-0">
-              <input type="text" class="bottom-border-input" [(ngModel)]="mPIN[1]" (input)="onMPINInput(1)" [ngClass]="{ 'active': selectedMPIN === 1 }" id="mpin-input-1">
-              <input type="text" class="bottom-border-input" [(ngModel)]="mPIN[2]" (input)="onMPINInput(2)" [ngClass]="{ 'active': selectedMPIN === 2 }" id="mpin-input-2">
-              <input type="text" class="bottom-border-input" [(ngModel)]="mPIN[3]" (input)="onMPINInput(3)" [ngClass]="{ 'active': selectedMPIN === 3 }" id="mpin-input-3">
-              <input type="text" class="bottom-border-input" [(ngModel)]="mPIN[4]" (input)="onMPINInput(4)" [ngClass]="{ 'active': selectedMPIN === 4 }" id="mpin-input-4">
-              <input type="text" class="bottom-border-input" [(ngModel)]="mPIN[5]" (input)="onMPINInput(5)" [ngClass]="{ 'active': selectedMPIN === 5 }" id="mpin-input-5"> -->
+
               <ion-row class="digit-center">
                 <ion-col size="1.5">
-                  <ion-input type="tel" mode="ios" class="bottom-border-input" #otp1 required="true" maxLength="1" [(ngModel)]="t1" (ionChange)="checkEvent()" (keyup)="otpController($event,otp2,'')"></ion-input>
+                  <ion-input type="tel" mode="ios" class="bottom-border-input" #otp1 required="true"
+                    autocomplete="one-time-code" maxLength="1" [(ngModel)]="t1" (ionInput)="countChange($event)"
+                    (ionChange)="checkEvent()" (keyup)="otpController($event,otp2,'')"></ion-input>
                 </ion-col>
                 <ion-col size="1.5">
-                  <ion-input type="tel" mode="ios" class="bottom-border-input" #otp2 required="true" maxLength="1" [(ngModel)]="t2" (ionChange)="checkEvent()" (keyup)="otpController($event,otp3,otp1)"></ion-input>
+                  <ion-input type="tel" mode="ios" class="bottom-border-input" #otp2 required="true"
+                    autocomplete="one-time-code" maxLength="1" [(ngModel)]="t2" (ionInput)="countChange($event)"
+                    (ionChange)="checkEvent()" (keyup)="otpController($event,otp3,otp1)"></ion-input>
                 </ion-col>
                 <ion-col size="1.5">
-                  <ion-input type="tel" mode="ios" class="bottom-border-input" #otp3 required="true" maxLength="1" [(ngModel)]="t3" (ionChange)="checkEvent()" (keyup)="otpController($event,otp4,otp2)"></ion-input>
+                  <ion-input type="tel" mode="ios" class="bottom-border-input" #otp3 required="true"
+                    autocomplete="one-time-code" maxLength="1" [(ngModel)]="t3" (ionInput)="countChange($event)"
+                    (ionChange)="checkEvent()" (keyup)="otpController($event,otp4,otp2)"></ion-input>
                 </ion-col>
                 <ion-col size="1.5">
-                  <ion-input type="tel" mode="ios" class="bottom-border-input" #otp4 required="true" maxLength="1" [(ngModel)]="t4" (ionChange)="checkEvent()"  (keyup)="otpController($event,otp5,otp3)"></ion-input>
+                  <ion-input type="tel" mode="ios" class="bottom-border-input" #otp4 required="true"
+                    autocomplete="one-time-code" maxLength="1" [(ngModel)]="t4" (ionInput)="countChange($event)"
+                    (ionChange)="checkEvent()" (keyup)="otpController($event,otp5,otp3)"></ion-input>
                 </ion-col>
                 <ion-col size="1.5">
-                  <ion-input type="tel" mode="ios" class="bottom-border-input" #otp5 required="true" maxLength="1" [(ngModel)]="t5" (ionChange)="checkEvent()"  (keyup)="otpController($event,otp6,otp4)"></ion-input>
+                  <ion-input type="tel" mode="ios" class="bottom-border-input" #otp5 required="true"
+                    autocomplete="one-time-code" maxLength="1" [(ngModel)]="t5" (ionInput)="countChange($event)"
+                    (ionChange)="checkEvent()" (keyup)="otpController($event,otp6,otp4)"></ion-input>
                 </ion-col>
                 <ion-col size="1.5">
-                  <ion-input type="tel" mode="ios" class="bottom-border-input active" #otp6 required="true" maxLength="1" [(ngModel)]="t6" (ionChange)="checkEvent()"  (keyup)="otpController($event,'',otp5)"></ion-input>
+                  <ion-input type="tel" mode="ios" class="bottom-border-input" #otp6 required="true"
+                    autocomplete="one-time-code" maxLength="1" [(ngModel)]="t6" (ionInput)="countChange($event)"
+                    (ionChange)="checkEvent()" (keyup)="otpController($event,'',otp5)"></ion-input>
                 </ion-col>
               </ion-row>
-              
-            
+
             </div>
+            <div class="error-message">{{mpinError}}</div>
             <a href="#" class="forgot_link">Forgot Mpin</a>
           </div>
           <div class="tab-pane" [ngClass]="{ 'active-tab': selectedTab === 'Internet Banking' }">
-            <input type="text" [(ngModel)]="customerId" placeholder="Customer ID" class="bottom-border-input">
-            <input type="password" [(ngModel)]="password" placeholder="Password" class="bottom-border-input">
-          
-            <!-- <button (click)="login()">Login</button> -->
-            <ion-button class="registerButton"  (click)="login()" expand="block">Login</ion-button>
-            <a href="#" class="forgot_link">Forgot Internet banking Credentials</a>
+            <form [formGroup]="loginForm" (ngSubmit)="login()">
+              <div class="input-field">
+                <input type="text" formControlName="username" placeholder="Customer ID" class="bottom-border-input">
+
+              </div>
+              <div class="input-field">
+                <input type="password" formControlName="password" placeholder="Password" class="bottom-border-input">
+              </div>
+            </form>
+            <div class="error-message">{{ errorMessage }}</div>
+            <ion-button class="registerButton" (click)="login()" expand="block" type="submit">Login</ion-button>
+            <a href="#" class="forgot_link">Forgot Internet banking Credentials..</a>
           </div>
         </div>
       </div>
-      
-      
+   </div>
+
+
+    <!-- section four -->
+
+    <div class="bio_matric_logo">
+      <img src="../../../assets/images/thumb.png" alt="">
+    </div>
+
+    <!-- section five -->
+   
+
+    <app-cards [title]="'Dashboard1'"></app-cards>
+    <app-cards [title]="'Dashboard2'"></app-cards>
+    <app-cards [title]="'Dashboard3'"></app-cards>
+
+
+    <div class="imageSwipperWrap">
+      <app-imgswiper></app-imgswiper>
     </div>
 
 
-       <!-- section four -->
 
-       <div class="bio_matric_logo">
-        <img src="../../../assets/images/thumb.png" alt="">
-       </div>
+    <!-- footer start -->
 
-     
-       <app-cards></app-cards>
-
-       <!-- <div class="card_main_log_wrap">
-
-        <div class="card_main_log">
-          <div class="card_view" *ngFor="let block of cardBlock; let i = index">
-            <div class="img_block">
-              <img [src]="block.imageUrl" alt="Image {{i + 1}}">
-            </div>
-            <div class="bottom_text">{{ block.text }}</div>
-          </div>
-      
-        
-         </div>
-      </div> -->
 
   </main>
-
-
- 
 </ion-content>
+<app-footer></app-footer>

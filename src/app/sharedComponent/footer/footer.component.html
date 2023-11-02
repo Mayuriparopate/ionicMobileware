@@ -1,0 +1,39 @@
+<ion-footer>
+  <div class="footer_tab_section">
+    <div class="tab_wrap">
+      <div class="tab tab1" tab="Home" [ngClass]="activetabs===1?'activeT':''"  (click)="tabs(1)">
+        <div class="tab_bar_v2 home-tab">
+          <span class="tab_lable">Home</span>
+        </div>
+      </div>
+
+      <div class="tab tab2" tab="learn" [ngClass]="activetabs===2?'activeT':''" (click)="tabs(2)">
+        <div class="tab_bar_v2 portfolio-tab" >
+          <span class="tab_lable">Demo video</span>
+        </div>
+      </div>
+
+      <div class="tab tab3" tab="scan" [ngClass]="activetabs===3?'activeS':''" (click)="tabs(3)">
+        <div class="tab_bar_v2 scan-tab" >
+          <span class="tab_lable">Scan & Pay</span>
+        </div>
+        </div>
+
+      <div class="tab tab4" tab="calculator" [ngClass]="activetabs===4?'activeT':''" (click)="tabs(4)">
+      <div class="tab_bar_v2 learns-tab" >
+        <span class="tab_lable">Apply now</span>
+      </div>
+      </div>
+
+      <div class="tab tab5" tab="account" [ngClass]="activetabs===5?'activeT':''" (click)="tabs(5)">
+      <div class="tab_bar_v2 account-tab" >
+        <span class="tab_lable">Branch locator</span>
+      </div>
+      </div>
+
+
+
+
+    </div>
+  </div>
+</ion-footer>

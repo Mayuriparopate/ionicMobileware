@@ -1,0 +1,21 @@
+.slider_box{
+    border-radius: 16px;
+    overflow: hidden;
+    margin: 20px 18px 25px;
+    max-height: 100px;
+   
+img{
+    max-height: 100px;
+    max-width: 100%;
+    min-width: 100%;
+    min-height: 100px;
+}
+}
+
+.main_swiper{
+    --swiper-navigation-size: 12px;
+    --swiper-navigation-top-offset: 50%;
+    --swiper-navigation-sides-offset: 0px;
+    --swiper-navigation-color: #646464;
+    --swiper-theme-color:gray;
+}

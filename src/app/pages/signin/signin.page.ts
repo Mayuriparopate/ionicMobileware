@@ -1,5 +1,8 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { ConstantsService } from 'src/app/service/constants/constants.service';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { ToastController } from '@ionic/angular';
+import { AuthenticationService } from 'src/app/service/authentication/authentication.service';
 
 @Component({
   selector: 'app-signin',
@@ -7,13 +10,6 @@ import { ConstantsService } from 'src/app/service/constants/constants.service';
   styleUrls: ['./signin.page.scss'],
 })
 export class SigninPage implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
-    
-  }
-
   selectedTab: string = 'mPIN';
   customerId: string = '';
   password: string = '';
@@ -27,30 +23,43 @@ export class SigninPage implements OnInit {
   public t5: any;
   public t6: any;
 
+  
+ 
   @ViewChild('key1', { static: false }) otp1;
   @ViewChild('key5', { static: false }) otp5;
   @ViewChild('key6', { static: false }) otp6;
  
+  public otpCount: number;
+  OTP: string[] = ['', '', '', '', '', ''];
+
+  loginForm: FormGroup;
+  errorMessage: string='';
+  mpinError:string='';
+  constructor(private router: Router,private authService: AuthenticationService,public toastController: ToastController,private formBuilder: FormBuilder,) {
+    this.loginForm = this.formBuilder.group({
+      username: [null, Validators.required], // Initialize with a default value or null
+      password: [null, Validators.required]
+    });
+    this.loginForm.get('username').valueChanges.subscribe(value => {
+      
+      console.log('Username value:', value);
+      if(value == ""){
+        this.errorMessage ="";
+      }
+    });
+      this.loginForm.get('password').valueChanges.subscribe(value => {
+        if(value == ""){
+          this.errorMessage ="";
+        }
+  });
+   }
+
+  ngOnInit() {
+    
+  }
+
 
   
-  // onMPINInput(index: number) {
-  //   if (this.mPIN[index] && /^[0-9]$/.test(this.mPIN[index])) {
-  //     this.selectedMPIN = index < 5 ? index + 1 : 5;
-  //     if (index < 5) {
-  //       this.focusNextInput(index + 1);
-  //     }
-  //   }
-  // }
-
-  // focusNextInput(index: number) {
-  //   if (index >= 0 && index < 6) {
-  //     const inputElement = document.getElementById(`mpin-input-${index}`);
-  //     if (inputElement) {
-  //       inputElement.focus();
-  //     }
-  //   }
-  // }
-
   checkEvent() {
     var t = this.t1 + "";
     var temp = t.split('');
@@ -66,39 +75,36 @@ export class SigninPage implements OnInit {
     }
 
     if ((this.t1 + "" + this.t2 + this.t3 + this.t4 + this.t5 + this.t6).length == 6) {
-     
+     this.next();
       return true;
     }
     else {
-     
+      
       return false;
     }
   }
 
+next(){
+ if(this.t1 + "" + this.t2 + this.t3 + this.t4 + this.t5 + this.t6 === '123456'){
+  this.router.navigate(['/dashboard']);
+ }else{
+  this.mpinError="Please enter valid MPIN"
+ }
+}
+countChange(event) {
+  event.target.value = event.target.value.replace(/[^0-9]*/g, '');
+}
 
   selectTab(tab: string) {
     this.selectedTab = tab;
-  }
-
-  login() {
-    // Implement your login logic here
+    
   }
 
   register(){
     // Implement your register logic here
   }
 
-  // onMPINInput(event: any) {
-  //   const input = event.target;
-  //   if (this.currentInputIndex < 6) {
-  //     this.mPIN = this.mPIN.substr(0, this.currentInputIndex) + event.data + this.mPIN.substr(this.currentInputIndex);
-  //     this.currentInputIndex++;
-  //     if (this.currentInputIndex < 6) {
-  //       this.mpinInputElements[this.currentInputIndex].focus();
-  //     }
-  //   }
-  // }
-  OTP: string[] = ['', '', '', '', '', ''];
+ 
 
   otpController(event, next, prev, index?) {
     if (index == 6) {
@@ -113,12 +119,38 @@ export class SigninPage implements OnInit {
         next.setFocus();
         return; // This is a valid return statement
     }
-
     // If none of the conditions are met, you can choose to return or not.
     // If you don't want to return anything, you can omit the return statement.
     // If you want to return something for all cases, you can add a default return statement.
 }
 
+
+login() {
+    
+  const usernameControl = this.loginForm.get('username');
+  const passwordControl = this.loginForm.get('password');
+
+  if (usernameControl && passwordControl) {
+    const username = usernameControl.value;
+    const password = passwordControl.value;
+
+    if (this.authService.authenticate(username, password)) {
+      // Successful login, navigate to a different page
+      console.log("welcome")
+      this.errorMessage="";
+      this.router.navigate(['/dashboard']);
+    
+    } else {
+      // Display an error message if login fails
+      this.errorMessage = 'Invalid username or password';
+    }
+
+  }
+
 }
+
+}
+
+
 
 

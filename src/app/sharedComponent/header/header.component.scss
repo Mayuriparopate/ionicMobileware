@@ -1,0 +1,37 @@
+
+
+.main_hearder{
+    padding: 10px 32px;
+    --ion-background-color: #f9f9f900;
+    --ion-toolbar-background: #77b1f300;
+    --ion-item-background: #ffffff00;
+    --ion-toolbar-border-color: #77b1f300;
+    .menu_toolbar{
+      
+        .image_logo{
+            text-align: center;
+            display: flex !important;
+            justify-content: center !important;
+            align-items: center !important;
+            height: 38px;
+    min-height: 38px;
+    overflow: hidden;
+    img{
+        max-height: 38px;
+        min-height: 38px;
+    
+    }
+            .toolbar-title{
+          
+            }
+        }
+        .menu_button_wrap{
+
+            .menu_button{
+                font-size: 24px;
+             //   margin-left: 32px;
+                color: #646464;
+            }
+        }
+    }
+}
