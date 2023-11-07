@@ -169,17 +169,13 @@ ion-item {
 .light {
   --bg-colorFirst : var(--white);
   --bg-colorSec : var(--white);
-
   --text-colorFirst : var(--gray);
   --text-colorSecond : var(--white);
   --textcolorThird : var(--lightGray);
   --text-corlorBlue: var(--darkBlue);
-
   //use for tab button
   --tabBg:var(--lightGray);
   --tabBtn: var(--darkBlue);
- 
-
 }
 
 //For darkMode
@@ -190,12 +186,9 @@ ion-item {
   --text-colorSecond : var(--white);
   --textcolorThird : var(--white);
   --text-corlorBlue: var(--darkBlue);
-
   //use for tab button
   --tabBg:var(--lightGray);
   --tabBtn: var(--btnActive);
-  
-
 }
 
 
@@ -203,7 +196,6 @@ ion-item {
 //tab button
 .statementTabWrap{
   background: var(--tabBg);
-
   .btnTab{
     color: var(--text-colorSecond);
   }
@@ -211,7 +203,6 @@ ion-item {
     .btnTab{
       background: var(--tabBtn);
       color: var(--text-colorSecond);
-    }
-    
+    }   
     }
 }
