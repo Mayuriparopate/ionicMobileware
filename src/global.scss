@@ -29,6 +29,12 @@
  * -----------------------------------
  */
 
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* This sets a different background and item background in light mode on ios */
 .ios body {
   --ion-background-color: #f2f2f6;
@@ -134,4 +140,78 @@ ion-item {
 @keyframes exampleCardView {
   from {opacity: 0.3;}
   to {opacity: 1;}
+}
+
+
+
+
+
+
+/* color Styles */
+:root {
+  --red: #FE0000;
+  --green: #0D9F1A;
+  --black: black;
+  --white: #FFFFFF;
+  --yellow: yellow;
+  --pink: pink;
+  --lightGray: #A6A4A4;
+  --darkBlue: #002A69; 
+--gray: #4D4D4D;
+--graySec : #585858;
+--grayThird :#646464;
+--grayFourth : #454545;
+
+--btnActive: linear-gradient(271deg, #131313, #4d4d4d);
+}
+
+//For LightMode
+.light {
+  --bg-colorFirst : var(--white);
+  --bg-colorSec : var(--white);
+
+  --text-colorFirst : var(--gray);
+  --text-colorSecond : var(--white);
+  --textcolorThird : var(--lightGray);
+  --text-corlorBlue: var(--darkBlue);
+
+  //use for tab button
+  --tabBg:var(--lightGray);
+  --tabBtn: var(--darkBlue);
+ 
+
+}
+
+//For darkMode
+.dark {
+  --bg-colorFirst : var(--graySec);
+  --bg-colorSec : var(--gray);
+  --text-colorFirst : var(--white);
+  --text-colorSecond : var(--white);
+  --textcolorThird : var(--white);
+  --text-corlorBlue: var(--darkBlue);
+
+  //use for tab button
+  --tabBg:var(--lightGray);
+  --tabBtn: var(--btnActive);
+  
+
+}
+
+
+
+//tab button
+.statementTabWrap{
+  background: var(--tabBg);
+
+  .btnTab{
+    color: var(--text-colorSecond);
+  }
+  .activeTab{
+    .btnTab{
+      background: var(--tabBtn);
+      color: var(--text-colorSecond);
+    }
+    
+    }
 }

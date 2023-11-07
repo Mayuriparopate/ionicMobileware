@@ -1,0 +1,31 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" [ngClass]="isDarkMode ? 'dark' : 'light'">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">details</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+
+
+  <button class="p-2 bg-blue-500 text-white rounded-full" (click)="toggleMode()">
+    Toggle Theme
+  </button>
+
+<!-- //tab button -->
+  <ul class="statementTabWrap text-sm  m-10 lg:m-40 font-medium text-center rounded-3xl shadow flex">
+    <li class="w-full" [ngClass]="{'activeTab': activeLink === 'Mini Statement'}">
+      <a href="#" (click)="setActiveLink('Mini Statement')" class="btnTab inline-block w-full p-4 rounded-3xl  focus:outline-none" aria-current="page">Mini Statement</a>
+    </li>
+    <li class="w-full" [ngClass]="{'activeTab': activeLink === 'Detail Statement'}">
+      <a href="#" (click)="setActiveLink('Detail Statement')" class="btnTab inline-block w-full p-4  rounded-3xl focus:outline-none">Detail Statement</a>
+    </li>
+  </ul>
+  
+
+</ion-content>
