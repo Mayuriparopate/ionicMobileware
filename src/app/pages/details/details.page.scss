@@ -1,89 +1,38 @@
-.main_wrap_detail{
-  margin-top: 20px;
-    width: 100%;
-    .round_shape_block{
-        position: relative;
-        border-radius: 0 70px 0 0;
-background: linear-gradient(356deg, rgb(0, 42, 105) 0%, rgb(182, 2, 25) 65%, rgb(0, 42, 105) 100%);
+.main_wrap_detail {
+    .round_shape_block {
+  border-radius: 0 70px 0 0;
+        background: linear-gradient(356deg, rgb(0, 42, 105) 0%, rgb(182, 2, 25) 65%, rgb(0, 42, 105) 100%);
 
-width: 100%;
-        .inner_round_shape_block{
-            background: linear-gradient(180deg, rgba(192,0,21,1) 41%, rgba(0,42,105,1) 84%);
+        .inner_round_shape_block {
+            background: linear-gradient(180deg, rgba(192, 0, 21, 1) 41%, rgba(0, 42, 105, 1) 84%);
+            border-radius: 40% 70px 170px 0;
+            .user_logo_sec {
+                margin-top: 14px;
+                top: -36px;
+         
+            }
 
-width: 100%;
-border-radius: 40% 70px 170px 0;
-   // section second
-   .user_logo_sec {
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    margin-top: 14px;
-    position: absolute;
-    top: -36px;
-    left: 50%;
-    background: #fff;
-    border-radius: 50%;
-    transform: translate(-50%, 0%);
-    .logo_img {
+            .content_wrap {
+                padding-top: 50px;
+                padding-bottom: 72px;
 
-        border: 1px solid #b1b1b1;
-        border-radius: 50%;
-        padding: 10px 15px;
-        font-size: 30px;
-        color: #b1b1b1;
-    }
+                .text_content {
+                     max-width: 320px;               
+                }
 
+                .bottom_line {
+                     max-width: 145px;
+                     margin-top: 10px;
+                }
 
-}
-
-.content_wrap{
-    padding-top: 50px;
-    padding-bottom: 72px;
-    .text_content{
-        text-align: center;
-        max-width: 320px;
-        margin: auto;
-        margin-top: 11px;
-        &.userName{
-            font-family: 'Open Sans';
-            font-style: normal;
-            font-weight: 400;
-            font-size: 20px;
-            color: #fff;
-        }
-
-        .headTitle{
-            font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: bold;
-    font-size: 15px;
-    color: #fff;
-        }
-.infoText{
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    color: #fff;
-}
-    }
-    .bottom_line{
-        max-width: 145px;
-    margin: auto;
-    opacity: 0.5;
-    margin-top: 10px;
-    border-radius: 16px;
-    }
-    .edit_btn{
-        text-align: center;
-        ion-button{
-            --background: #C00015;
-            --border-radius: 38px;
-        }
-    }
-}
+                .edit_btn {
+                    ion-button {
+                        --background: #C00015;
+                        --border-radius: 38px;
+                    }
+                }
+            }
 
         }
     }
 }
-
