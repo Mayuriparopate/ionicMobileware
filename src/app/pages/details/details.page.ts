@@ -25,4 +25,17 @@ export class DetailsPage implements OnInit {
   ngOnInit() {
   }
 
+  isEditing = false;
+
+  toggleEditable() {
+    this.isEditing = !this.isEditing;
+
+    const editableAddress = document.getElementById('editableAddress');
+    const editablePhone = document.getElementById('editablePhone');
+
+    if (editableAddress && editablePhone) {
+      editableAddress.contentEditable = this.isEditing.toString();
+      editablePhone.contentEditable = this.isEditing.toString();
+    }
+  }
 }
