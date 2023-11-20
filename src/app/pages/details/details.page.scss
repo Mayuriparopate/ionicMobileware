@@ -1,15 +1,16 @@
 .main_wrap_detail {
     .round_shape_block {
-  border-radius: 0 70px 0 0;
+        border-radius: 0 70px 0 0;
         background: linear-gradient(356deg, rgb(0, 42, 105) 0%, rgb(182, 2, 25) 65%, rgb(0, 42, 105) 100%);
 
         .inner_round_shape_block {
             background: linear-gradient(180deg, rgba(192, 0, 21, 1) 41%, rgba(0, 42, 105, 1) 84%);
             border-radius: 40% 70px 170px 0;
+
             .user_logo_sec {
                 margin-top: 14px;
                 top: -36px;
-         
+
             }
 
             .content_wrap {
@@ -17,12 +18,12 @@
                 padding-bottom: 72px;
 
                 .text_content {
-                     max-width: 320px;               
+                    max-width: 320px;
                 }
 
                 .bottom_line {
-                     max-width: 145px;
-                     margin-top: 10px;
+                    max-width: 145px;
+                    margin-top: 10px;
                 }
 
                 .edit_btn {
@@ -38,83 +39,45 @@
 }
 
 
-.wrap_submit_form{
-//position: relative;
-//padding-top: 50px;
-.gradeBlock{
-
-    width: 35%;
-    height: 23px;
-// position: absolute;
-    top: -10px;
-    
-}
-.left_gradeint{
-    background: linear-gradient(91deg, #002A69, #B80218, #C00015);
-//border-radius: 0px 10px 10px 0px;
-}
-.right_gradeint{
-    background: linear-gradient(270deg, #002A69, #B80218, #C00015);
-   // border-radius: 10px 0px 0px 10px;
-    right: 0;
-}
-
-    .user_logo_sec{
-        .logo_img{
-    transform: translate(-50%, -50%);
-    top: 0;
-    left: 50%;
-    // position: absolute;
-            .person_edit{
+.wrap_submit_form {
+    .gradeBlock {
+        width: 35%;
+        height: 23px;
+        top: -10px;
+    }
+    .left_gradeint {
+        background: linear-gradient(91deg, #002A69, #B80218, #C00015);
+    }
+    .right_gradeint {
+        background: linear-gradient(270deg, #002A69, #B80218, #C00015);
+        right: 0;
+    }
+    .user_logo_sec {
+        .logo_img {
+            transform: translate(-50%, -50%);
+            top: 0;
+            left: 50%;
+            .person_edit {
                 border: 2px solid #D7D7D7;
-    border-radius: 50%;
-    // padding: 10px;
-    //font-size: 50px;
-    // color: #D7D7D7;
-    // background-color: #fff;
+                border-radius: 50%;
             }
-            .camera_edit{
-                //position: absolute;
-    bottom: 10%;
-    right: -10%;
-    // background: gray;
-    border-radius: 50%;
-  //  padding: 5px;
-    // color: #fff;
-   // font-size: 15px;
+            .camera_edit {
+                bottom: 10%;
+                right: -10%;
+                border-radius: 50%;
             }
         }
     }
 
-    .all_content_wrap{
+    .all_content_wrap {
         margin: 0 54px;
-        .bottom_line{
+        .bottom_line {
             margin-bottom: 18px;
             margin-top: 18px;
         }
-        .text_content{
-         
-            &.name_user{
-               // text-align: center;
-              //  margin-bottom: 22px;
-                // color: #3E3E3E;
-              //  font-size: 20px;
-            }
-            .headTitle{
-                // color: #646464;
-               // font-size: 15px;
-               // font-weight: bold;
-            }
-            .infoText{
-               // font-size: 16px;
-                // color: #646464;
-              //  max-width: 320px;
-            }
-        }
     }
-
-    .submit_btn{
-        ion-button{
+    .submit_btn {
+        ion-button {
             --background: #002A69;
             --border-radius: 20px;
             font-size: 16px;
